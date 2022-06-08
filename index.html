@@ -1,0 +1,72 @@
+<style>
+    body{
+        font-family: "Outfit", "Neue Montreal", "Helvetica Neue", sans-serif;
+        overflow: hidden;
+        background-color: #0B0B0C;
+    }
+    .container{
+
+        width: 95%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .digitalClock{
+        border: 1px solid #C84B31;
+        width: fit-content;
+        margin: auto;
+        padding: 10px;
+        border-radius: 2px;
+        color: #eeeeee;
+        background-color: rgba(200, 75, 49, 0.23);
+    }
+    .digitalClock h1{
+        display: inline-block;
+        margin: 0 10px;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+    @media(max-width: 768px){
+        #bar1,#bar2{
+            display: none;
+        }
+        .digitalClock{
+            text-align: center;
+            width: 100%;
+        }
+        .digitalClock h1{
+            display: block;
+        }
+    }
+    @media(max-width:480px){
+        .digitalClock h1{
+            font-size: 4rem;
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="digitalClock">
+            <h1 id="day">MON</h1>
+            <h1 id="hour">04</h1>
+            <h1 id="bar1">:</h1>
+            <h1 id="minute">20</h1>
+            <h1 id="bar2">:</h1>
+            <h1 id="second">30</h1>
+            <h1 id="ampm">PM</h1>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
